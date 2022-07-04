@@ -1,7 +1,8 @@
-/* eslint-disable max-classes-per-file */
 // ------------------------ imports -------------------------- //
 
-import BooksClass, { booksData, Dynamic } from './modules/books-class.js';
+import BooksClass from './modules/books-class.js';
+import { booksData } from './modules/Books-dataClass.js';
+import Dynamic from './modules/dynamicClass.js';
 import validations from './modules/validations.js';
 import pagesSwap from './modules/pageSwap.js';
 import { DateTime } from './modules/luxon.js';
