@@ -2,9 +2,9 @@
 // ------------------------ imports -------------------------- //
 
 import booksClass, {booksData, Dynamic} from "./modules/books-class.js";
-import date from "./modules/date.js";
 import validations from "./modules/validations.js";
 import pagesSwap from "./modules/pageSwap.js";
+import { DateTime } from "./modules/luxon.js";
 
 // ------------------------ VARIABLES -------------------------- //
 const addBtn = document.querySelector('#addBtn');
@@ -12,6 +12,7 @@ const title = document.querySelector('#titleId');
 const author = document.querySelector('#authorId');
 const navA = document.querySelectorAll('.navbar-a');
 const navAList = Array.from(navA);
+const dateP = document.querySelector('.dateParagraph');
 
 // ----------------------- EVENT LISTENER ------------------- //
 
@@ -44,7 +45,9 @@ window.addEventListener('load', () => {
 
 // ------------------------ DATE ----------------------------- //
 
-date.dateP.textContent = `${date.months[date.date.getMonth()]} ${date.date.getDate()}  ${date.date.getFullYear()}, ${date.date.getHours()}:${date.date.getMinutes()}`;
+let dt = DateTime.now()
+dateP.textContent = `${dt.toLocaleString(DateTime.DATETIME_MED)}`;
+
 
 // ------------------------ pageSwap ----------------------------- //
 
