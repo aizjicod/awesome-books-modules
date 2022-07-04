@@ -248,9 +248,9 @@ form input {
       cover,
       cover;
     background-position:
-      center center,
-      center center,
-      bottom bottom;
+      center,
+      center,
+      bottom;
     transition: background-image 3s;
   }
 

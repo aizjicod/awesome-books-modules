@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+
 export default class BookConstructor {
   constructor(title, author) {
     this.title = title;
@@ -9,10 +11,9 @@ export class BooksDataClass {
   constructor() {
     return [];
   }
-};
+}
 
-export let booksData = new BooksDataClass();
-
+export const booksData = new BooksDataClass();
 
 export class Dynamic {
   static loadBooks(index) {

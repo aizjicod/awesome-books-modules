@@ -1,10 +1,10 @@
 /* eslint-disable max-classes-per-file */
 // ------------------------ imports -------------------------- //
 
-import booksClass, {booksData, Dynamic} from "./modules/books-class.js";
-import validations from "./modules/validations.js";
-import pagesSwap from "./modules/pageSwap.js";
-import { DateTime } from "./modules/luxon.js";
+import BooksClass, { booksData, Dynamic } from './modules/books-class.js';
+import validations from './modules/validations.js';
+import pagesSwap from './modules/pageSwap.js';
+import { DateTime } from './modules/luxon.js';
 
 // ------------------------ VARIABLES -------------------------- //
 const addBtn = document.querySelector('#addBtn');
@@ -23,7 +23,7 @@ addBtn.addEventListener('click', () => {
   const authorMsg = 'author space is in blank';
 
   if (validations(titleName, titleMsg, authorName, authorMsg)) {
-    const addNewBook = new booksClass(titleName, authorName);
+    const addNewBook = new BooksClass(titleName, authorName);
     booksData.push(addNewBook);
     Dynamic.loadBooks(booksData.length - 1);
     localStorage.setItem('books', JSON.stringify(booksData));
@@ -45,9 +45,8 @@ window.addEventListener('load', () => {
 
 // ------------------------ DATE ----------------------------- //
 
-let dt = DateTime.now()
+const dt = DateTime.now();
 dateP.textContent = `${dt.toLocaleString(DateTime.DATETIME_MED)}`;
-
 
 // ------------------------ pageSwap ----------------------------- //
 

@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+
 const error = document.querySelector('#error');
 
 const showmessage = (test, msg) => {
@@ -16,4 +18,4 @@ export default function validations(input, msg, input2, msg2) {
     return showmessage(false, msg2);
   }
   return showmessage(true, '');
-};
+}
